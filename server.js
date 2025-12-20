@@ -17,7 +17,7 @@ app.use(express.json());
 
 // --- 2. AI Configuration ---
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-const MODEL_NAME = "gemini-3-flash"; // Highly stable for educational tools
+const MODEL_NAME = "gemini-3-flash-preview"; // Highly stable for educational tools
 
 // --- 3. The API Endpoint ---
 app.post('/api/generate-resource', async (req, res) => {
@@ -61,3 +61,4 @@ app.listen(PORT, '0.0.0.0', () => {
     console.log(`Server is running on port ${PORT}`);
 
 });
+
